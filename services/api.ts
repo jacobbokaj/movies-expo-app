@@ -3,7 +3,7 @@ export const TMDB_CONFIG = {
     API_KEY: process.env.EXPO_PUBLIC_MOVIE_API_KEY,
     headers: {
         accept: 'application/json',
-        Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0ZTMyMzkxNmZlMTIzZDkyMTY4ODJlMjlhNDRmMTFmMyIsIm5iZiI6MTc0MTg2NzIxMi40MDcsInN1YiI6IjY3ZDJjOGNjMzI1ZTYyYjNkMTYwYTQxOCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.zVyKg8M_47NgzMRO50iTxEP-lwkuVGIaPe4o2w6r7zs`
+        Authorization: `Bearer ${process.env.EXPO_PUBLIC_MOVIE_API_KEY}`
     }
 }
 
@@ -16,7 +16,7 @@ export const fetchMovies = async({query}: { query: string}) => {
 
 
         const url = 'https://api.themoviedb.org/3/keyword/100/movies?include_adult=false&language=en-US&page=1';
-      const response = await fetch(endpoint, {
+        const response = await fetch(endpoint, {
         method: 'GET',
         headers: TMDB_CONFIG.headers,
         });

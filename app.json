@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/icons/logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.moviesexpoapp"
     },
     "web": {
       "bundler": "metro",
